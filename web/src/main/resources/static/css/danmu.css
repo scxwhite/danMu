@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	background-color: #00F5FF;
+}
+
+.screen {
+	text-align: center;
+	margin: 0 auto;
+	background-color: #000;
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.start_screen {
+	text-decoration: none;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	color: #ffffff;
+	border: 0;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	font-size: 21px;
+	cursor: hand;
+}
+
+.end_screen ,.back {
+	text-decoration: none;
+	position: absolute;
+	right: 30px;
+	top: 10px;
+	color: #ffffff;
+	border: 0;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	font-size: 21px;
+	cursor: hand;
+	display: none;
+}
+
+.screen .inputArea {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100px;
+	background-color: black;
+}
+
+.inputText {
+	text-decoration: none;
+	text-align: left;
+	width: 700px;
+	height: 40px;
+	margin: 0;
+	margin-top:30px;
+	font-size: 20px;
+}
+
+.textSubmit {
+	width:100px;
+	height:40px;
+	background:#088;
+	border:0;
+	font-size:18px;
+	font-family:"微软雅黑";
+	color:#fff;
+	cursor:pointer;
+	border-radius:0 3px 3px 0;
+	outline:none;
+}
+.screen font{
+	line-height:36px;
+	font-size:24px;
+	font-weight:bold;
+	position:absolute;
+	top:0;
+	left:0;
+}

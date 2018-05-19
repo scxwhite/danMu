@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scx.mapper.DanMuMapper">
+    <resultMap id="BaseResultMap" type="com.scx.entity.DanMu">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="VARCHAR"/>
+        <result column="msg" property="msg" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="base_column_list">
+        msg,create_time
+    </sql>
+    <sql id="base_table" >
+        danmu
+    </sql>
+
+
+    <insert id="insert" parameterType="com.scx.entity.DanMu" >
+        INSERT INTO
+        <include refid="base_table"/>
+        (msg,create_time)
+        VALUES (#{msg,jdbcType=VARCHAR},#{createTime,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="base_column_list"/>
+        from
+        <include refid="base_table"/>
+    </select>
+</mapper>

@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    username: root
+    password: XIAOSUDA
+    url: jdbc:mysql://localhost:3306/javadanmu?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+
+mybatis:
+  mapper-locations: "classpath:mybatis/*.xml"

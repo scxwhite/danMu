@@ -27,6 +27,11 @@ public class DanMuServiceImpl implements DanMuService {
 
     @Override
     public List<DanMu> findAll() {
-        return danMuMapper.selectAll();
+        List<DanMu> danMus = danMuMapper.selectAll();
+        danMus.sort((o1, o2) -> Float.compare(
+                Float.valueOf(o1.getCreateTime() == null ? "0" : o1.getCreateTime()),
+                Float.valueOf(o2.getCreateTime() == null ? "0" : o2.getCreateTime()))
+        );
+        return danMus;
     }
 }

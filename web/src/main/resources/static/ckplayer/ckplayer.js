@@ -1364,6 +1364,7 @@ html5代码块的代码可以随意更改以适合你的应用，欢迎到论坛
 				C._J_=0;
 				C.videoSeek(C._O_['totaltime']);
 			}
+            timeHandler(t);
             C.returnStatus('time:' + t, 1);
         }
     }
